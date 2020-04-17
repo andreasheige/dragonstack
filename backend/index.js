@@ -1,22 +1,9 @@
-const Dragon = require('./dragon');
+const GenerationEngine = require('./engine');
 
-const fooey = new Dragon({
-    birthdate: new Date(), 
-    nickname: 'fooey'
-});
-const baloo = new Dragon({
-    birthdate: new Date(), 
-    nickname: 'baloo'
-});
-const googley = new Dragon({
-    birthdate: new Date(), 
-    nickname: 'googley'
-});
-const katla = new Dragon()
+const engine = new GenerationEngine();
 
+engine.start();
 
-
-console.log('fooet',fooey);
-console.log('baloo', baloo);
-console.log('googley',googley);
-console.log('katla', katla)
+setTimeout(() => {
+    engine.stop();
+}, 20000);
